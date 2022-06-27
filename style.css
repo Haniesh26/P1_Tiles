@@ -1,0 +1,553 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Nunito Sans' sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  padding: 20px 50px;
+}
+
+.searchIcon {
+  width: 20px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+}
+.searchInput::placeholder {
+  color: lightcyan;
+}
+
+.typeTiles {
+  display: flex;
+  justify-content: center;
+  color: lightgrey;
+}
+.typeList {
+  cursor: pointer;
+  font-weight: 400;
+  margin-right: 30px;
+}
+.slider {
+  background-color: lightslategray;
+  color: white;
+  overflow: hidden;
+  height: 45vw;
+
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+.sliderWrapper {
+  display: flex;
+  width: 500vw;
+  transition: all 1s ease-in-out;
+}
+
+.sliderItem {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: black;
+}
+
+.sliderImg {
+  clip-path: inset(6% 6% 5% 6% round 5% 20% 0 10%);
+  margin-left: 10%;
+  width: 600px;
+  height: 40vw;
+}
+.sliderPosition {
+  color: azure;
+  position: absolute;
+  right: 10%;
+}
+.sliderCollection {
+  font-weight: 300;
+}
+
+.sliderPrice {
+  font-weight: 300;
+}
+
+.buyButton {
+  background-color: rgb(184, 142, 142);
+  padding: 15px;
+  border: none;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.buyButton:hover {
+  background-color: rgb(3, 3, 3);
+  color: rgb(184, 142, 142);
+}
+
+.sliderItem:nth-child(2) .slider {
+  background-color: antiquewhite;
+}
+.features {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.featureImg {
+  height: 60px;
+  width: 60px;
+}
+/* .featureBg
+{
+    background-color: rgb(248, 134, 134);
+    width: 350px;;
+    height: 350px;
+    position:absolute;
+    top:1%;
+    left: 10px;
+    border-radius: 50%;
+    
+} */
+
+.featureTitle {
+  font-size: large;
+  font-weight: 700;
+  margin: 15px;
+}
+.featureDesc {
+  font-size: medium;
+  font-weight: 500;
+  width: 50%;
+  color: rgb(145, 141, 141);
+}
+
+.product {
+  height: 100vh;
+  background-color: rgb(97, 95, 91);
+  position: relative;
+  clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.payment {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 7%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+  margin: auto;
+  padding: 10px 30px;
+  background-color: lightblue;
+  display: none;
+  flex-direction: column;
+
+  z-index: 1;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.payInput {
+  padding: 5px;
+  margin: 5px 0px;
+  border: none;
+  border-bottom: 2px solid lightgrey;
+}
+.payInput:focus {
+  outline: none;
+}
+
+.payInput::placeholder {
+  color: rgb(224, 224, 224);
+}
+
+.payTitle {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 1%;
+  color: rgb(118, 110, 110);
+}
+
+.cardIcons {
+  margin-top: -3%;
+}
+
+.sm {
+  width: 30%;
+}
+
+.payButton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  border: 0.13px solid black;
+  background-color: beige;
+  color: black;
+  padding: 10px;
+  font-size: 19px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  background-color: black;
+  top: 2px;
+  right: 2px;
+}
+.cardInfo {
+  display: flex;
+
+  justify-content: space-between;
+}
+/* .product{
+    -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+} */
+.productImg {
+  clip-path: inset(6% 6% 5% 6% round 5% 20% 0 10%);
+  margin-top: 4%;
+  margin-left: 1%;
+  width: 50%;
+  height: 90vh;
+}
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding-top: 40px;
+  color: black;
+}
+.productPrice {
+  color: azure;
+}
+.productTitle {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(246, 166, 7);
+}
+.productDesc {
+  font-size: 18px;
+  padding-top: 20px;
+  color: white;
+  height: auto;
+  width: 70%;
+}
+.colors {
+  display: flex;
+}
+.color {
+  margin-right: 3%;
+  margin-bottom: 3%;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(93, 199, 167);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color:hover {
+  border: 1px solid black;
+}
+
+.color:last-child {
+  background-color: rgb(231, 231, 176);
+}
+.productButton {
+  background-color: rgb(3, 3, 3);
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid black;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+.productButton:hover {
+  background-color: rgb(70, 62, 62);
+}
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.galleryItem {
+  padding: 40px 10px;
+  flex: 1;
+}
+
+.galleryImg {
+  width: 20vw;
+  height: 75vh;
+}
+
+.upcomingCollections {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 40px;
+  position: relative;
+}
+
+.upcoming {
+  height: 70vh;
+  width: 30vw;
+}
+
+.adTitle {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+}
+
+.oldCollections {
+  cursor: pointer;
+  background-color: lightskyblue;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  margin-top: 5%;
+  border: none;
+}
+
+.oldCollections:hover {
+  background-color: rgb(54, 177, 253);
+}
+.collectionTitle {
+  font-weight: 500;
+}
+
+footer {
+  background-color: aliceblue;
+  padding-bottom: 5px;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.footMenuList {
+  padding: 0px;
+  list-style-type: none;
+}
+
+.footMenuTitle {
+  font-size: 18px;
+}
+
+.footListItem {
+  margin-bottom: 7px;
+  color: grey;
+  cursor: pointer;
+}
+
+.followIcons {
+  display: flex;
+}
+
+.fIcon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 10%;
+}
+
+.footerMenuSm {
+  margin-right: 7%;
+}
+
+.footerBottom {
+  text-align: right;
+}
+@media screen and (min-width: 260px) and (max-width: 960px) {
+  nav {
+    background-color: black;
+    padding: 20px;
+  }
+
+  .search {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+  }
+
+  .navTop {
+    flex-wrap: wrap;
+  }
+  .typeList {
+    margin: 20px 10px 5px 10px;
+  }
+  .typeTiles {
+    flex-wrap: wrap;
+  }
+  .slider {
+    clip-path: none;
+    height: 60vh;
+  }
+  .sliderImg {
+    margin-top: 2px;
+    width: 80vw;
+    height: 30vh;
+    margin-left: 0px;
+  }
+  .sliderWrapper {
+    position: relative;
+  }
+  .sliderItem {
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search {
+    display: none;
+  }
+  .sliderPosition {
+    text-align: center;
+    position: unset;
+    width: 100%;
+
+    font-size: 3vw;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .featureDesc {
+    width: 80%;
+    padding-bottom: 15px;
+  }
+
+  .product {
+    clip-path: none;
+    height: auto;
+    padding: 0px 10px;
+  }
+
+  .productDetails {
+    position: unset;
+    padding-top: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  .productImg {
+    width: 100%;
+    height: 30vh;
+  }
+  .productDesc {
+    padding-top: 3px;
+    width: 100%;
+  }
+  .colors {
+    align-items: center;
+    justify-content: center;
+  }
+  .payment {
+    width: 90%;
+    height: 90%;
+    padding: 6px;
+    position: absolute;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .galleryImg {
+    width: 100%;
+    padding: 0px;
+  }
+  .upcomingCollections {
+    display: grid;
+    grid-template-columns: 1;
+    padding: 0px;
+  }
+  .adTitle {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .upcoming {
+    height: 50vh;
+    width: 100vw;
+  }
+  .footerTop {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 520px) and (max-width: 540px) {
+  .slider {
+    clip-path: none;
+    height: 70vh;
+  }
+}
